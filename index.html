@@ -1,0 +1,104 @@
+<DOCTYPE html>
+<meta name="viewport" content="width=device-width,initial-scale=1.0" charset="utf-8">
+<html>
+<head>
+</head>
+
+
+<body>
+<style>
+body {
+  background-color: black;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.redline {
+  border: 1px solid red;
+}
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  }
+  div {
+  transition-delay: 2s;
+}
+</style>
+<img id="kocka1" src="roll.gif" width="150" height="150">
+<div>&nbsp</div>
+<img id="kocka2" src="roll.gif" width="150" height="150">
+<div>&nbsp</div>
+<button class="button" onClick="dobas()" width="80" height="20">Dobas</button>
+
+<script>
+
+function dobas(){
+  var dobas1 = (Math.floor(Math.random() * 6) + 1);
+  var dobas2 = (Math.floor(Math.random() * 6) + 1);
+  console.log(dobas1);
+  console.log(dobas2);
+
+  document.getElementById("kocka1").src = "roll.gif";
+  document.getElementById("kocka2").src = "roll.gif";
+  
+setTimeout(function(){
+  
+  switch(dobas1){
+    case 1:
+    document.getElementById("kocka1").src = "kocka1.jpg";
+    break;
+    case 2:
+    document.getElementById("kocka1").src = "kocka2.jpg";
+    break;
+    case 3:
+    document.getElementById("kocka1").src = "kocka3.jpg";
+    break;
+    case 4:
+    document.getElementById("kocka1").src = "kocka4.jpg";
+    break;
+    case 5:
+    document.getElementById("kocka1").src = "kocka5.jpg";
+    break;
+    case 6:
+    document.getElementById("kocka1").src = "kocka6.jpg";
+    break;
+  }
+  
+  switch(dobas2){
+    case 1:
+    document.getElementById("kocka2").src = "kocka1.jpg";
+    break;
+    case 2:
+    document.getElementById("kocka2").src = "kocka2.jpg";
+    break;
+    case 3:
+    document.getElementById("kocka2").src = "kocka3.jpg";
+    break;
+    case 4:
+    document.getElementById("kocka2").src = "kocka4.jpg";
+    break;
+    case 5:
+    document.getElementById("kocka2").src = "kocka5.jpg";
+    break;
+    case 6:
+    document.getElementById("kocka2").src = "kocka6.jpg";
+    break;
+  }
+  }, 2000)
+}
+
+</script>
+</body>
+</html>
